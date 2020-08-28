@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbarAlwaysDrawHorizontalTrack="false"
+    android:scrollbarSize="10dp"
+    android:scrollbarThumbVertical="@android:drawable/screen_background_light_transparent"
+    tools:context=".LandingPage">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bgforlower">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/view"
+
+            android:layout_width="match_parent"
+            android:layout_height="223dp"
+            android:background="@drawable/gradientbackground"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.454"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/WelcomeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="24dp"
+                android:layout_marginRight="24dp"
+                android:fontFamily="@font/changa_extralight"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.531"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/profile_image" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/profile_image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:onClick="UploadProfilePicture"
+                app:civ_border_color="@color/colorPrimary"
+                app:civ_border_width="2dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/skill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:alpha="0.7"
+                android:fontFamily="@font/bubblegum_sans"
+                android:textColor="@color/common_google_signin_btn_text_dark_default"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/WelcomeTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/xyz"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="8dp" />
+
+        <GridLayout
+            android:id="@+id/gridLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="52dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view">
+
+            <Button
+                android:id="@+id/RemoveMemberButton"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="5"
+                android:layout_column="1"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/remvove_member_icon"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="RemoveMember"
+                android:text="Remove a Member"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/allIdeas"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="2"
+                android:layout_column="1"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/attendance_icon"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="DisplayAttendance"
+                android:text="Attendance" />
+
+            <Button
+                android:id="@+id/Vcode"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="5"
+                android:layout_column="0"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/addmember"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="GenerateNewMemberVerificationCode"
+                android:text="Generate New Member Verification Code"
+                android:textSize="10sp"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="809dp" />
+
+            <Button
+                android:id="@+id/AttendanceSystem"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="4"
+                android:layout_column="0"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/mark_attendance_icon"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="AttendanceSystem"
+                android:text="Attendance System"
+                android:visibility="gone"
+                tools:layout_editor_absoluteX="16dp"
+                tools:layout_editor_absoluteY="809dp" />
+
+            <Button
+                android:id="@+id/ideas"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="0"
+                android:layout_column="1"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/ideaicon"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="SubmitIdeas"
+                android:text="Submit a Idea"
+                android:textSize="12sp" />
+
+            <Button
+                android:id="@+id/meetings"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="1"
+                android:layout_column="0"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/meetings"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="DisplayMeetings"
+                android:text="Meetings" />
+
+            <Button
+                android:id="@+id/events"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="1"
+                android:layout_column="1"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/ev"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="DisplayEvents"
+                android:text="Events" />
+
+            <Button
+                android:id="@+id/AddAnn"
+                android:layout_width=" 176dp"
+                android:layout_height="116dp"
+                android:layout_row="3"
+                android:layout_column="1"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/a5"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="AddAnnouncements"
+                android:text="Add a Announcement"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/AddEv"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="3"
+                android:layout_column="0"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/ev"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="AddEvent"
+                android:text="Add a Event"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/AddMeet"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="4"
+                android:layout_column="1"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/meetings"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="AddMeeting"
+                android:text="Add a Meeting"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/AllIdeas"
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="2"
+                android:layout_column="0"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background"
+                android:drawableTop="@drawable/allid"
+                android:fontFamily="@font/bubblegum_sans"
+                android:onClick="AllIdeas"
+                android:text="All Ideas" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="176dp"
+                android:layout_height="116dp"
+                android:layout_row="0"
+                android:layout_column="0"
+                android:background="@drawable/common_google_signin_btn_icon_dark_normal_background">
+
+                <Button
+                    android:id="@+id/ideas3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_row="0"
+                    android:layout_column="0"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:layout_marginRight="8dp"
+                    android:background="@android:color/transparent"
+                    android:drawableTop="@drawable/a7"
+                    android:drawablePadding="10dp"
+                    android:fontFamily="@font/bubblegum_sans"
+                    android:onClick="DisplayAnnouncements"
+                    android:text="Announcements"
+                    android:textSize="12sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.507"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="3dp" />
+
+                <TextView
+                    android:id="@+id/UnseenAnnouncementTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop=" 0dp"
+                    android:background="@android:color/holo_green_dark"
+                    android:padding="3dp"
+                    android:text="12"
+                    android:textColor="@color/common_google_signin_btn_text_dark_default"
+                    android:textSize="16dp"
+                    app:layout_constraintStart_toEndOf="@+id/ideas3"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </GridLayout>
+
+
+        <View
+            android:id="@+id/divider"
+
+            android:layout_width="match_parent"
+            android:layout_height="6dp"
+            android:background="@android:color/holo_green_light"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/view" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.core.widget.NestedScrollView>

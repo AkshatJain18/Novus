@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nestedScrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".AddEvent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:minHeight="900dp">
+
+        <EditText
+            android:id="@+id/VenueEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-light"
+            android:inputType="text"
+            android:minWidth="300dp"
+            android:onClick="onTimeClick"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/meetingVenueHeading" />
+
+        <EditText
+            android:id="@+id/venueEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-light"
+            android:inputType="date"
+            android:minWidth="300dp"
+            android:onClick="onTimeClick"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/MeetingVenueHeading" />
+
+        <TextView
+            android:id="@+id/meetingVenueHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Event Venue"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TimeSpinner" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar6"
+            android:layout_width="388dp"
+            android:layout_height="43dp"
+            android:background="@color/endblue"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:layout_constraintStart_toStartOf="parent"
+            app:title="Add Event"
+            app:titleTextColor="@color/common_google_signin_btn_text_dark_pressed"
+            tools:layout_editor_absoluteY="0dp" />
+
+        <EditText
+            android:id="@+id/TimeSpinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-light"
+            android:inputType="date"
+            android:onClick="onTimeClick"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EventTimeHeading" />
+
+        <TextView
+            android:id="@+id/EventTimeHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Event Time"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/FromDateEditText" />
+
+        <EditText
+            android:id="@+id/FromDateEditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-condensed-light"
+            android:inputType="date"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EventDateHeading" />
+
+        <EditText
+            android:id="@+id/EventNameEditText"
+            android:layout_width="325dp"
+            android:layout_height="41dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="28dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-black"
+            android:inputType="textPersonName"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EventNameHeading" />
+
+        <TextView
+            android:id="@+id/EventNameHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="64dp"
+            android:text="Event Name"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar6" />
+
+        <TextView
+            android:id="@+id/EventDateHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="32dp"
+            android:text="Event Date"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/EventNameEditText" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="wrap_content"
+            android:layout_height="31dp"
+            android:layout_marginStart="148dp"
+            android:layout_marginLeft="148dp"
+            android:layout_marginTop="32dp"
+            android:background="@color/colorAccent"
+            android:onClick="SaveEvent"
+            android:text="Add Event"
+            android:textColor="@color/common_google_signin_btn_text_dark_default"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/VenueEditText" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:onClick="onDateClick"
+            app:layout_constraintStart_toEndOf="@+id/FromDateEditText"
+            app:layout_constraintTop_toBottomOf="@+id/EventDateHeading"
+            app:srcCompat="@drawable/cal" />
+
+        <ImageView
+            android:id="@+id/imageView6"
+            android:layout_width="47dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:onClick="onTimeClick"
+            app:layout_constraintStart_toEndOf="@+id/TimeSpinner"
+            app:layout_constraintTop_toBottomOf="@+id/EventTimeHeading"
+            app:srcCompat="@drawable/clock" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "975545259635",
+    "firebase_url": "https://novusdatabase.firebaseio.com",
+    "project_id": "novusdatabase",
+    "storage_bucket": "novusdatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:975545259635:android:227d01f3496d8b8e",
+        "android_client_info": {
+          "package_name": "com.org.novus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "975545259635-br49emm8ul2jnqgvka9nkqj3tk7k158k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAyfxLb7hSrGUDSARs5FBsVEFJFFi6FUtU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "975545259635-br49emm8ul2jnqgvka9nkqj3tk7k158k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

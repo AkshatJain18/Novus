@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bgforlower"
+    tools:context=".NewMemberVerificationCode">
+
+    <EditText
+        android:id="@+id/MobNoEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/square_edittext"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:hint="  Enter Mob no"
+        android:inputType="phone"
+        android:minWidth="200dp"
+        android:paddingLeft="10dp"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        android:textColorHint="@color/colorPrimaryDark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="153dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/buttonstylewithgradient"
+        android:onClick="CheckPermissions"
+        android:text="Send Verification code"
+        app:layout_constraintStart_toEndOf="@+id/button9"
+        app:layout_constraintTop_toBottomOf="@+id/MobNoEditText" />
+
+    <Button
+        android:id="@+id/button9"
+        android:layout_width="152dp"
+        android:layout_height="98dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/buttonstyle"
+        android:onClick="Generate"
+        android:text="Generate Verification Code"
+        android:textColor="@color/common_google_signin_btn_text_dark_focused"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/MobNoEditText" />
+
+    <Button
+        android:id="@+id/button10"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="87dp"
+        android:background="@drawable/contacts_icon"
+        android:onClick="PickContact"
+        app:layout_constraintStart_toEndOf="@+id/MobNoEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

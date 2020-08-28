@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:minHeight="900dp"
+    tools:context=".Attendance">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar8"
+            android:layout_width="388dp"
+            android:layout_height="37dp"
+            android:background="@color/endblue"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme"
+            app:title="Attendance"
+            app:titleTextColor="@color/common_google_signin_btn_text_dark_pressed" />
+
+        <ListView
+            android:id="@+id/listview"
+            android:layout_width="match_parent"
+            android:layout_height="475dp"
+            android:layout_marginTop="40dp"
+            android:isScrollContainer="true"
+            android:paddingBottom="50dp"
+            android:scrollbarStyle="insideOverlay"
+            android:verticalScrollbarPosition="right"
+            app:layout_constraintTop_toBottomOf="@+id/textView16"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <TextView
+            android:id="@+id/textView16"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/adamina"
+            android:text="Overall Attendance:"
+            android:textColor="@color/common_google_signin_btn_text_dark_focused"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar8" />
+
+        <TextView
+            android:id="@+id/OverallAttendanceTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/adamina"
+            android:text="100%"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView16"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar8" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
